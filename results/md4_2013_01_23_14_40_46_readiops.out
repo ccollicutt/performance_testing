@@ -1,0 +1,8 @@
+readiops: (g=0): rw=randwrite, bs=512-512/512-512, ioengine=libaio, iodepth=32
+...
+readiops: (g=0): rw=randwrite, bs=512-512/512-512, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+
+Run status group 0 (all jobs):

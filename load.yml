@@ -1,0 +1,8 @@
+---
+- hosts: all
+  user: ubuntu
+  tasks:
+  - name: dd /dev/urandom
+    action: shell time dd if=/dev/urandom of=/var/tmp/dd.out bs=1M count=100
+  - name: remove random file
+    action: shell rm -f /var/tmp/dd.out

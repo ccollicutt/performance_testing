@@ -1,0 +1,8 @@
+readbw: (g=0): rw=randread, bs=1M-1M/1M-1M, ioengine=libaio, iodepth=32
+...
+readbw: (g=0): rw=randread, bs=1M-1M/1M-1M, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+
+Run status group 0 (all jobs):

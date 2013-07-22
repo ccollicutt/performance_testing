@@ -36,7 +36,7 @@ fio --name=writebw --filename=/dev/$DEVICE --direct=1 --rw=randwrite --bs=1m --n
 
 # Read IOPS test
 echo "Running read IOPS test..."
-fio --name=readiops --filename=/dev/$DEVICE --direct=1 --rw=randwrite --bs=512 --numjobs=4 --iodepth=32 --direct=1 --iodepth_batch=16 --iodepth_batch_complete=16 --runtime=300 --ramp_time=5 --norandommap --time_based --ioengine=libaio --group_reporting > ./results/${DEVICE}_${NOW}_readiops.out
+fio --name=readiops --filename=/dev/$DEVICE --direct=1 --rw=randread --bs=512 --numjobs=4 --iodepth=32 --direct=1 --iodepth_batch=16 --iodepth_batch_complete=16 --runtime=300 --ramp_time=5 --norandommap --time_based --ioengine=libaio --group_reporting > ./results/${DEVICE}_${NOW}_readiops.out
 
 # Read Bandwidth test
 echo "Running read bandwidth test..."

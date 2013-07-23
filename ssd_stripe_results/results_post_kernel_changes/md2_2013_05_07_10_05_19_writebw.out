@@ -1,0 +1,32 @@
+writebw: (g=0): rw=randwrite, bs=1M-1M/1M-1M, ioengine=libaio, iodepth=32
+...
+writebw: (g=0): rw=randwrite, bs=1M-1M/1M-1M, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+writebw: (groupid=0, jobs=4): err= 0: pid=8964
+  write: io=351756MB, bw=1172.3MB/s, iops=1171 , runt=300077msec
+    slat (usec): min=702 , max=7655 , avg=2479.07, stdev=1053.02
+    clat (msec): min=9 , max=1703 , avg=105.11, stdev=50.80
+     lat (msec): min=11 , max=1704 , avg=107.58, stdev=50.66
+    bw (KB/s) : min=    0, max=322630, per=1.42%, avg=17089.60, stdev=66391.24
+  cpu          : usr=6.49%, sys=1.47%, ctx=325206, majf=0, minf=91
+  IO depths    : 1=0.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.1%, 32=101.6%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued r/w/d: total=0/351632/0, short=0/0/0
+
+     lat (msec): 10=0.01%, 20=0.28%, 50=6.89%, 100=25.37%, 250=67.38%
+     lat (msec): 500=0.03%, 2000=0.07%
+
+Run status group 0 (all jobs):
+  WRITE: io=351756MB, aggrb=1172.3MB/s, minb=1200.4MB/s, maxb=1200.4MB/s, mint=300077msec, maxt=300077msec
+
+Disk stats (read/write):
+  md2: ios=83/1429248, merge=0/0, ticks=0/0, in_queue=0, util=0.00%, aggrios=28/238140, aggrmerge=0/114, aggrticks=204/10801068, aggrin_queue=10801046, aggrutil=99.89%
+    sdd: ios=0/237617, merge=0/1, ticks=0/13375760, in_queue=13375700, util=99.46%
+    sdf: ios=0/237874, merge=0/16, ticks=0/19957164, in_queue=19957264, util=99.89%
+    sdc: ios=16/238281, merge=0/226, ticks=700/14311460, in_queue=14311536, util=98.57%
+    sdb: ios=66/238600, merge=0/218, ticks=368/2353628, in_queue=2353856, util=85.78%
+    sde: ios=2/237871, merge=0/2, ticks=12/13180964, in_queue=13180800, util=99.76%
+    sda: ios=87/238601, merge=0/226, ticks=144/1627432, in_queue=1627124, util=73.69%

@@ -1,0 +1,23 @@
+readiops: (g=0): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+...
+readiops: (g=0): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+readiops: (groupid=0, jobs=4): err= 0: pid=6103
+  read : io=122275MB, bw=417363KB/s, iops=104340 , runt=300002msec
+    slat (usec): min=34 , max=10253 , avg=118.42, stdev=110.82
+    clat (usec): min=37 , max=16077 , avg=1094.81, stdev=369.31
+     lat (usec): min=227 , max=16117 , avg=1213.33, stdev=386.13
+    bw (KB/s) : min=    0, max=106376, per=1.64%, avg=6864.41, stdev=25862.60
+  cpu          : usr=2.29%, sys=28.14%, ctx=23253762, majf=0, minf=223
+  IO depths    : 1=0.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.1%, 32=101.7%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued r/w/d: total=31302336/0/0, short=0/0/0
+     lat (usec): 50=0.01%, 100=0.01%, 250=0.19%, 500=7.60%, 750=8.56%
+     lat (usec): 1000=15.53%
+     lat (msec): 2=67.05%, 4=1.06%, 10=0.01%, 20=0.01%
+
+Run status group 0 (all jobs):
+   READ: io=122275MB, aggrb=417363KB/s, minb=427380KB/s, maxb=427380KB/s, mint=300002msec, maxt=300002msec

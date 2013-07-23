@@ -1,0 +1,22 @@
+readbw: (g=0): rw=randread, bs=1M-1M/1M-1M, ioengine=libaio, iodepth=32
+...
+readbw: (g=0): rw=randread, bs=1M-1M/1M-1M, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+readbw: (groupid=0, jobs=4): err= 0: pid=6415
+  read : io=162236MB, bw=553524KB/s, iops=540 , runt=300131msec
+    slat (usec): min=1353 , max=13844 , avg=1586.88, stdev=301.57
+    clat (usec): min=233701 , max=248002 , avg=235289.55, stdev=579.62
+     lat (usec): min=235527 , max=249620 , avg=236869.29, stdev=554.06
+    bw (KB/s) : min=    0, max=113005, per=1.27%, avg=7017.14, stdev=27206.34
+  cpu          : usr=0.02%, sys=1.59%, ctx=166856, majf=0, minf=32863
+  IO depths    : 1=0.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.1%, 32=101.7%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued r/w/d: total=162112/0/0, short=0/0/0
+
+     lat (msec): 250=100.08%
+
+Run status group 0 (all jobs):
+   READ: io=162236MB, aggrb=553523KB/s, minb=566808KB/s, maxb=566808KB/s, mint=300131msec, maxt=300131msec

@@ -1,0 +1,24 @@
+writeiops: (g=0): rw=randwrite, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+...
+writeiops: (g=0): rw=randwrite, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+writeiops: (groupid=0, jobs=4): err= 0: pid=6974
+  write: io=110172MB, bw=376053KB/s, iops=94012 , runt=300002msec
+    slat (usec): min=53 , max=13709 , avg=142.76, stdev=111.06
+    clat (usec): min=3 , max=244439 , avg=1205.69, stdev=2188.37
+     lat (usec): min=154 , max=244635 , avg=1347.92, stdev=2190.51
+    bw (KB/s) : min=    0, max=103944, per=1.59%, avg=5965.28, stdev=23124.42
+  cpu          : usr=2.69%, sys=27.91%, ctx=20545670, majf=0, minf=87
+  IO depths    : 1=0.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.1%, 32=101.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued r/w/d: total=0/28204032/0, short=0/0/0
+     lat (usec): 4=0.01%, 20=0.01%, 50=0.01%, 100=0.02%, 250=1.77%
+     lat (usec): 500=9.34%, 750=9.34%, 1000=9.34%
+     lat (msec): 2=66.21%, 4=3.76%, 10=0.04%, 20=0.04%, 50=0.11%
+     lat (msec): 100=0.01%, 250=0.01%
+
+Run status group 0 (all jobs):
+  WRITE: io=110172MB, aggrb=376052KB/s, minb=385078KB/s, maxb=385078KB/s, mint=300002msec, maxt=300002msec

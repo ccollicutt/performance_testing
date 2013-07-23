@@ -1,0 +1,33 @@
+readiops: (g=0): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+...
+readiops: (g=0): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+fio 1.59
+Starting 4 processes
+
+readiops: (groupid=0, jobs=4): err= 0: pid=8655
+  read : io=150899MB, bw=515066KB/s, iops=128765 , runt=300001msec
+    slat (usec): min=36 , max=29654 , avg=118.59, stdev=301.91
+    clat (usec): min=1 , max=1551.9K, avg=867.46, stdev=2819.80
+     lat (usec): min=118 , max=1551.1K, avg=986.07, stdev=2855.50
+    bw (KB/s) : min=    0, max=202248, per=1.74%, avg=8959.74, stdev=33065.16
+  cpu          : usr=2.73%, sys=29.50%, ctx=24343619, majf=0, minf=227
+  IO depths    : 1=0.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.1%, 32=101.7%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=0.0%, 8=0.0%, 16=100.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued r/w/d: total=38629920/0/0, short=0/0/0
+     lat (usec): 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+     lat (usec): 100=0.01%, 250=0.04%, 500=2.18%, 750=21.53%, 1000=61.71%
+     lat (msec): 2=14.27%, 4=0.10%, 10=0.13%, 20=0.03%, 50=0.01%
+     lat (msec): 2000=0.01%
+
+Run status group 0 (all jobs):
+   READ: io=150899MB, aggrb=515065KB/s, minb=527427KB/s, maxb=527427KB/s, mint=300001msec, maxt=300001msec
+
+Disk stats (read/write):
+  md2: ios=39281248/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%, aggrios=6548802/4, aggrmerge=0/2, aggrticks=5043780/782, aggrin_queue=5046010, aggrutil=100.00%
+    sdd: ios=6536636/14, merge=1/16, ticks=4648604/1588, in_queue=4652232, util=100.00%
+    sdf: ios=6537506/7, merge=0/0, ticks=4869064/1564, in_queue=4872952, util=100.00%
+    sdc: ios=6557475/0, merge=0/0, ticks=5402904/0, in_queue=5404164, util=99.65%
+    sdb: ios=6561920/0, merge=0/0, ticks=5293760/0, in_queue=5294324, util=99.64%
+    sde: ios=6538123/5, merge=0/0, ticks=4758280/1544, in_queue=4761732, util=100.00%
+    sda: ios=6561155/0, merge=0/0, ticks=5290072/0, in_queue=5290656, util=99.65%

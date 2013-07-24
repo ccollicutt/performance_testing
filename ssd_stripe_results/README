@@ -1,0 +1,1 @@
+This directory is disorganized, but essentially it has some fio results from the fio_test.sh script for various non-enterprise drives we have tested in a striped configuration for a project in which we are using stateless virtual machines.
